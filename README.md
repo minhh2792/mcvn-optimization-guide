@@ -4,7 +4,11 @@
 
 ## Mục lục
 
-[P1](#p1)
+**Khởi đầu**
+
+ - [Phần I. Lựa chọn phần cứng](p1)
+ - [Phần II. Lựa chọn Minecraft Server Software](p2)
+ - [Phần III. Tinh chỉnh run.bat](p3)
 
 ## Giải thích thuật ngữ và phân loại lag
 
@@ -72,9 +76,10 @@ FPS là số khung hình một giây, hiểu đơn giản càng cao game của b
 
 Về RAM, theo kinh nghiệm cá nhân thì dung lượng RAM ít nhất là 8GB. Tất nhiên các bạn có thể tự cân đo đong đếm cho phù hợp. RAM có xung nhịp cao cũng ảnh hưởng ít nhiều đến hiệu năng.
 
-## Phần III. Lựa chọn Minecraft Server Software
+<h1 name="p2">Phần II. Minecraft Server Software</h1> 
 
 > Công việc cần thiết khi tạo server
+
 Theo mình, một server software tốt phải thoả mãn các yêu cầu sau:
 
  - **Cộng đồng người dùng đông đảo**
@@ -97,9 +102,10 @@ Theo mình, một server software tốt phải thoả mãn các yêu cầu sau:
 
 **❗Lưu ý: Không dùng Spigot/Craftbukkit**
 
-##  Phần IV. Tinh chỉnh run.bat
+<h1 name="p3">Phần III. Tinh chỉnh run.bat</h1> 
 
 > Tùy chỉnh lại thành phần bên trong file run.bat một cách hiệu quả nhất
+
 Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã được dùng rộng rãi trên các server lớn:
 
 > java -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui
@@ -114,7 +120,6 @@ còn tiếp...
 Trong đây có thể có một số sai sót, có thể do nguyên nhân chủ quan hoặc khách quan. Hãy thoải mái contribute vào đây nhé 😉
 
 Được lấy ý tưởng từ [đây](https://github.com/YouHaveTrouble/minecraft-optimization)
-
 
 **Sponsor**: [Thecaofast](https://thecaofast.net)
 
