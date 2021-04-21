@@ -6,9 +6,9 @@
 
 **Khởi đầu**
 
- - [Phần I. Lựa chọn phần cứng](p1)
- - [Phần II. Lựa chọn Minecraft Server Software](p2)
- - [Phần III. Tinh chỉnh run.bat](p3)
+ - [Phần I. Lựa chọn phần cứng](#p1)
+ - [Phần II. Lựa chọn Minecraft Server Software](#p2)
+ - [Phần III. Tinh chỉnh run.bat](#p3)
 
 ## Giải thích thuật ngữ và phân loại lag
 
