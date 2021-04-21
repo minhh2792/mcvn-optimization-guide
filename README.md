@@ -7,7 +7,7 @@
 **Khởi đầu**
 
  - [Phần I. Lựa chọn phần cứng](#p1)
- - [Phần II. Lựa chọn Minecraft Server Software](#p2)
+ - [Phần II. Lựa chọn Minecraft Server Software](#p2) 
  - [Phần III. Tinh chỉnh run.bat](#p3)
 
 ## Giải thích thuật ngữ và phân loại lag
@@ -66,13 +66,13 @@ FPS là số khung hình một giây, hiểu đơn giản càng cao game của b
 
 > Phần cứng ảnh hưởng rất nhiều đến hiệu năng
 
-**A. Lựa chọn CPU**
+** A. Lựa chọn CPU**
 
  Nhiều người nghĩ rằng, chọn CPU có nhiều core là sẽ không bao giờ bị lag. Điều này hoàn toàn sai, thứ ảnh hưởng đến hiệu năng sẽ là khả năng xử lý đơn nhân của CPU đó. Minecraft chạy trên 1 nhân đồng nghĩa nó cũng sẽ chỉ dùng 1 nhân trong CPU, việc lựa chọn CPU có hiệu năng đơn nhân tốt có thể cải thiện về hiệu năng. Ngoài ra, nếu server bạn chạy đa luồng thì một CPU có nhiều core với hiệu năng, xung nhịp tốt là rất ổn.
 
  [Danh sách CPU đơn nhân](https://www.cpubenchmark.net/singleThread.html)
 
-**B. Lựa chọn RAM**
+** B. Lựa chọn RAM**
 
 Về RAM, theo kinh nghiệm cá nhân thì dung lượng RAM ít nhất là 8GB. Tất nhiên các bạn có thể tự cân đo đong đếm cho phù hợp. RAM có xung nhịp cao cũng ảnh hưởng ít nhiều đến hiệu năng.
 
@@ -114,6 +114,18 @@ Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã đ�
 
 > -XX:G1NewSizePercent=40
 -XX:G1MaxNewSizePercent=50-XX:G1HeapRegionSize=16M-XX:G1ReservePercent=15-XX:InitiatingHeapOccupancyPercent=20
+
+<h1 align="center">Nâng cao</h1>
+
+<h1 name="p4">Phần I. Tinh chỉnh bukkit.yml</h1> 
+
+> Vào file bukkit.yml và chỉnh như sau
+
+|Cài đặt |Giá trị  |
+|--|--|
+|chunk-gc.period-in-ticks  |400  |
+|ticks-per.(type)-spawns |monster:5, water:11, water-ambient:21, ambient:31 |
+|autosave |6000 | 
 
 còn tiếp...
 
