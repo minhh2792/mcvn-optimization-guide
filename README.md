@@ -156,6 +156,8 @@ Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar papercli
 
 > Vào file paper.yml và chỉnh như sau
 
+|Cài đặt|Giá trị|
+|--|--|
 |max-auto-save-chunks-per-tick|6|
 |optimize-explosions|true|
 |mob-spawner-tick-rate|2|
