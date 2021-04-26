@@ -1,3 +1,11 @@
+![star](https://img.shields.io/github/stars/minhh2792/mcvn-optimization-guide?style=flat-square)
+![Lines of code](https://img.shields.io/tokei/lines/github/minhh2792/mcvn-optimization-guide?style=flat-square)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/minhh2792/mcvn-optimization-guide?style=flat-square)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/minhh2792/mcvn-optimization-guide?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/minhh2792/mcvn-optimization-guide?style=flat-square)
+
+
+
 ## Tối ưu hoá Server Minecraft
 
 > Đây là các kinh nghiệm cá nhân mình đúc kết được sau hơn 4 năm làm server. Các bạn mới bắt đầu có thể lấy tài liệu này để tham khảo, tất nhiên nó sẽ không thể cải thiện hiệu năng một cách xuất sắc.
