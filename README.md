@@ -14,18 +14,14 @@
  **Khởi đầu**
  
 - [Phần I. Lựa chọn phần cứng](#p1)
-
 - [Phần II. Lựa chọn Minecraft Server Software](#p2)
-
 - [Phần III. Tinh chỉnh run.bat](#p3)
 
 **Nâng cao**
+
 - [Phần I. Tinh chỉnh bukkit.yml](#p4)
- 
 - [Phần II. Tinh chỉnh spigot.yml](#p5)
-
 - [Phần III. Tinh chỉnh paper.yml](#p6)
-
 - [Phần IV. Tinh chỉnh server.properties](#p7)
   
 ## Giải thích thuật ngữ và phân loại lag
