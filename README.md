@@ -2,8 +2,7 @@
 ![Lines of code](https://img.shields.io/tokei/lines/github/minhh2792/mcvn-optimization-guide?style=flat-square)
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/minhh2792/mcvn-optimization-guide?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/minhh2792/mcvn-optimization-guide?style=flat-square)
-
-
+![GitHub pull requests](https://img.shields.io/github/issues-pr/minhh2792/mcvn-optimization-guide?style=flat-square)
 
 ## Tối ưu hoá Server Minecraft
 
