@@ -6,7 +6,7 @@
 
 ## Tối ưu hoá Server Minecraft
 
-> Đây là các kinh nghiệm cá nhân mình đúc kết được sau hơn 4 năm làm server. Các bạn mới bắt đầu có thể lấy tài liệu này để tham khảo, tất nhiên nó sẽ không thể cải thiện hiệu năng một cách xuất sắc.
+Đây là các kinh nghiệm cá nhân mình đúc kết được sau hơn 4 năm làm server. Các bạn mới bắt đầu có thể lấy tài liệu này để tham khảo, tất nhiên nó sẽ không thể cải thiện hiệu năng một cách xuất sắc.
 
 ## Mục lục 
 
@@ -22,6 +22,7 @@
 - [Phần II. Tinh chỉnh spigot.yml](#p5)
 - [Phần III. Tinh chỉnh paper.yml](#p6)
 - [Phần IV. Tinh chỉnh server.properties](#p7)
+- [Phần V. Các kinh nghiệm khác](#p8)
   
 ## Giải thích thuật ngữ và phân loại lag
 
@@ -29,13 +30,13 @@
 
 **A. Giải thích thuật ngữ**
 
-- **TPS**: Viết tắt của **Tick Per Second**, Minecraft chạy trên 20 tick. Mỗi giây bằng 20 tick, có thể hiểu TPS càng cao thì càng mượt.
+- **TPS**: Viết tắt của **Tick Per Second**. Minecraft chạy trên 20 tick - mỗi giây bằng 20 tick. Có thể hiểu TPS càng cao thì càng mượt.
 
-- **Timings Report**: Công cụ phân tích server, được tích hợp sẵn. Có tác dụng cung cấp thông tin chi tiết về hiệu năng.
+- **Timings Report**: Công cụ phân tích server, được tích hợp sẵn. Giúp bạn biết được trong một khoảng thời gian nào đó, máy chủ xử lí tác vụ nào, trong thời gian bao lâu, chủ yếu giúp bạn kiểm tra hiệu năng của server.
 
-- **Minecraft Server Software**: Phần mềm dùng để chạy server, ví dụ: Spigot, Paper, Bukkit......
+- **Minecraft Server Software**: Phần mềm dùng để chạy server, ví dụ: Spigot, Paper, Bukkit...
 
-- **Ping**: Hiểu đơn giản là đỗ trễ, thời gian phản hồi.
+- **Ping**: Khoảng thời gian giữa việc người chơi "gửi" một thông tin nào đó lên server và server "trả về" thông tin tương ứng. Nói ngắn gọn là độ trễ của việc trao đổi thông tin giữa server và người chơi.
 
 - **FPS**: Viết tắt của **Frame Per Second** - số khung hình một giây.
 
@@ -64,6 +65,8 @@
 
 **FPS - Client lag**
 
+Hầu hết các hướng dẫn hiện tại đều chỉ người chơi đặt FPS ở mức Unlimited - Không giới hạn. Tuy nhiên, việc đặt ở mức Unlimited thực sự không nên vì sẽ tiêu tốn quá nhiều tài nguyên máy tính chỉ dành cho việc cố gắng đạt FPS càng cao càng tốt. Khuyến khích giới hạn FPS ở mức vừa phải để chừa tài nguyên cho máy tính thực hiện những tác vụ khác. (80 - 100 FPS là con số giới hạn FPS lí tưởng để gameplay không bị ảnh hưởng)
+
 |FPS|Ảnh hưởng|
 |--|--|
 |60+|FPS tốt cho Minecraft.|
@@ -85,7 +88,7 @@ Nhiều người nghĩ rằng, chọn CPU có nhiều core là sẽ không bao g
 
 **B. Lựa chọn RAM**  
 
-Về RAM, theo kinh nghiệm cá nhân thì dung lượng RAM ít nhất là 8GB. Tất nhiên các bạn có thể tự cân đo đong đếm cho phù hợp. RAM có xung nhịp cao cũng ảnh hưởng ít nhiều đến hiệu năng.  
+Về RAM, theo kinh nghiệm cá nhân thì dung lượng RAM ít nhất là 8GB. Tất nhiên các bạn có thể tự cân đo đong đếm cho phù hợp. RAM có xung nhịp cao cũng ảnh hưởng ít nhiều đến hiệu năng. 
 
 <h1 name="p2">Phần II. Minecraft Server Software</h1>  
 
@@ -178,13 +181,19 @@ Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar papercli
 |alt-item-despawn-rate|true|
 |anti-xray.enabled|true|
 
-<h1 name="p7">Phần IV.Tinh chỉnh server.properties</h1>  
+<h1 name="p7">Phần IV. Tinh chỉnh server.properties</h1>  
 
 > Mở file server.properties và chỉnh như sau
 
 |Cài đặt|Giá trị|
 |--|--|
 |view-distance|5| 
+
+<h1 name="p8">Phần V. Các kinh nghiệm khác</h1>
+
+- Nói về số RAM cấp cho mỗi server, một server lag có thể là do dung lượng RAM được cấp quá ít, nhưng một server được cấp *quá nhiều dung lượng RAM* sẽ không khiến cho server của bạn không bao giờ lag. Chỉ nên cấp một lượng RAM đủ cho server hoạt động không lag, cung cấp quá nhiều sẽ là một sự lãng phí tài nguyên vô ích.  
+
+- Mỗi gamemode sẽ có một cách tối ưu khác nhau. Đây chỉ là cách tối ưu có thể áp dụng chung cho hầu hết các server.  
 
 <h1 align="center">Lời kết</h1>  
 
@@ -200,5 +209,3 @@ Trong đây có thể có một số sai sót, có thể do nguyên nhân chủ 
 Được lấy ý tưởng từ [đây](https://github.com/YouHaveTrouble/minecraft-optimization)  
 
 **Sponsor**: [Thecaofast](https://thecaofast.net)
-
-![enter image description here](https://minhh2792.github.io/banner.gif)
