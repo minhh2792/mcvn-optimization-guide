@@ -195,6 +195,12 @@ Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar papercli
 
 - Mỗi gamemode sẽ có một cách tối ưu khác nhau. Đây chỉ là cách tối ưu có thể áp dụng chung cho hầu hết các server.  
 
+<h1 align="center">Giúp đỡ</h1>
+
+Nếu bạn cần giúp đỡ thêm, hãy liên hệ qua Facebook của mình
+
+<a href="https://www.facebook.com/minhh2792" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>
+
 <h1 align="center">Lời kết</h1>  
 
 Trong đây có thể có một số sai sót, có thể do nguyên nhân chủ quan hoặc khách quan. Hãy thoải mái contribute vào đây nhé 😉
@@ -209,3 +215,5 @@ Trong đây có thể có một số sai sót, có thể do nguyên nhân chủ 
 Được lấy ý tưởng từ [đây](https://github.com/YouHaveTrouble/minecraft-optimization)  
 
 **Sponsor**: [Thecaofast](https://thecaofast.net)
+
+![Banner](https://i.imgur.com/LIpjkFp.gif)
