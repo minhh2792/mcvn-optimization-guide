@@ -1,8 +1,10 @@
-![star](https://img.shields.io/github/stars/minhh2792/mcvn-optimization-guide?style=flat-square)
-![Lines of code](https://img.shields.io/tokei/lines/github/minhh2792/mcvn-optimization-guide?style=flat-square)
-![GitHub contributors](https://img.shields.io/github/contributors-anon/minhh2792/mcvn-optimization-guide?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/minhh2792/mcvn-optimization-guide?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/minhh2792/mcvn-optimization-guide?style=flat-square)
+![top](https://img.shields.io/badge/Minecraft%20Server-Optimization-blue?style=for-the-badge&logo=for-the-badge)
+
+![star](https://img.shields.io/github/stars/minhh2792/mcvn-optimization-guide?style=flat)
+![Lines of code](https://img.shields.io/tokei/lines/github/minhh2792/mcvn-optimization-guide?style=flat)
+![GitHub contributors](https://img.shields.io/github/contributors-anon/minhh2792/mcvn-optimization-guide?style=flat)
+![GitHub last commit](https://img.shields.io/github/last-commit/minhh2792/mcvn-optimization-guide?style=flat)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/minhh2792/mcvn-optimization-guide?style=flat)
 
 ## Tối ưu hoá Server Minecraft
 
