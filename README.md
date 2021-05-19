@@ -213,7 +213,3 @@ Trong đây có thể có một số sai sót, có thể do nguyên nhân chủ 
 
 
 Được lấy ý tưởng từ [đây](https://github.com/YouHaveTrouble/minecraft-optimization)  
-
-**Sponsor**: [Thecaofast](https://thecaofast.net)
-
-![Banner](https://i.imgur.com/LIpjkFp.gif)
