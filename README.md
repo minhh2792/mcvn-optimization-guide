@@ -1,28 +1,24 @@
-![star](https://img.shields.io/github/stars/minhh2792/mcvn-optimization-guide?style=flat-square)
-![Lines of code](https://img.shields.io/tokei/lines/github/minhh2792/mcvn-optimization-guide?style=flat-square)
-![GitHub contributors](https://img.shields.io/github/contributors-anon/minhh2792/mcvn-optimization-guide?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/minhh2792/mcvn-optimization-guide?style=flat-square)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/minhh2792/mcvn-optimization-guide?style=flat-square)
-
 ## Tối ưu hoá Server Minecraft
 
 Đây là các kinh nghiệm cá nhân mình đúc kết được sau hơn 4 năm làm server. Các bạn mới bắt đầu có thể lấy tài liệu này để tham khảo, tất nhiên nó sẽ không thể cải thiện hiệu năng một cách xuất sắc.
 
 ## Mục lục 
 
- **Khởi đầu**
+ **A.**
  
-- [Phần I. Lựa chọn phần cứng](#p1)
-- [Phần II. Lựa chọn Minecraft Server Software](#p2)
-- [Phần III. Tinh chỉnh run.bat](#p3)
+- [Phần I. Lựa chọn phần cứng](#hardware)
+- [Phần II. Lựa chọn Minecraft Server Software](#software)
+- [Phần III. Tinh chỉnh run.bat](#batch)
 
-**Nâng cao**
+**B.**
 
-- [Phần I. Tinh chỉnh bukkit.yml](#p4)
-- [Phần II. Tinh chỉnh spigot.yml](#p5)
-- [Phần III. Tinh chỉnh paper.yml](#p6)
-- [Phần IV. Tinh chỉnh server.properties](#p7)
-- [Phần V. Các kinh nghiệm khác](#p8)
+- [Phần I. Tinh chỉnh bukkit.yml](#bukkit)
+- [Phần II. Tinh chỉnh spigot.yml](#spigot)
+- [Phần III. Tinh chỉnh paper.yml](#paper)
+- [Phần IV. Tinh chỉnh server.properties](#server-properties)
+- [Phần V. Tinh chỉnh purpur.yml](#purpur)
+- [Phần VI. Tinh chỉnh airplane.yml](#airplane)
+- [Phần VII. Các mẹo khác](#tips)
   
 ## Giải thích thuật ngữ và phân loại lag
 
@@ -74,9 +70,9 @@ Hầu hết các hướng dẫn hiện tại đều chỉ người chơi đặt 
 |30 -> 15|FPS thấp, lag rõ rệt.|
 |1 -> 10|Quá thấp, bạn nên nâng cấp phần cứng.| 
 
-<h1 align="center">Khởi đầu</h1>
+<h1 align="center">A.</h1>
 
-<h1 name="p1">Phần I. Lựa chọn phần cứng</h1>  
+<h1 name="hardware">Phần I. Lựa chọn phần cứng</h1>  
 
 > Phần cứng ảnh hưởng rất nhiều đến hiệu năng  
 
@@ -90,15 +86,15 @@ Nhiều người nghĩ rằng, chọn CPU có nhiều core là sẽ không bao g
 
 Về RAM, theo kinh nghiệm cá nhân thì dung lượng RAM ít nhất là 8GB. Tất nhiên các bạn có thể tự cân đo đong đếm cho phù hợp. RAM có xung nhịp cao cũng ảnh hưởng ít nhiều đến hiệu năng. 
 
-<h1 name="p2">Phần II. Minecraft Server Software</h1>  
+<h1 name="software">Phần II. Minecraft Server Software</h1>  
 
-> Công việc cần thiết khi tạo server  
+> Chọn phần mềm thích hợp làm nền tảng để chạy server 
 
 Theo mình, một server software tốt phải thoả mãn các yêu cầu sau:  
 
 - **Cộng đồng người dùng đông đảo**  
 
-- **Được code bởi các lập trình viên có kinh nghiệm**  
+- **Được làm ra bởi các lập trình viên có kinh nghiệm**  
 
 - **Tương thích ổn định**  
 
@@ -114,34 +110,33 @@ Theo mình, một server software tốt phải thoả mãn các yêu cầu sau:
 
 - **[Purpur](https://github.com/pl3xgaming/Purpur): Bản fork của Airplane, cho khả năng tùy biến tính năng nhiều hơn.**  
 
-**❗Lưu ý: Không dùng Spigot/Craftbukkit**  
+**❗Lưu ý: Không dùng Spigot/Craftbukkit hay bất kì bản fork/custom nào "đA lUồNg tỚi 99%"**  
  
-<h1 name="p3">Phần III. Tinh chỉnh run.bat</h1>  
+<h1 name="batch">Phần III. Tinh chỉnh run.bat</h1>  
 
 > Tùy chỉnh lại thành phần bên trong file run.bat một cách hiệu quả nhất  
 
 Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã được dùng rộng rãi trên các server lớn. Hãy copy ở bên dưới vì bản gốc không có encoding UTF-8 giúp hiện kí tự tiếng Việt:
 
-> java -Dfile.encoding=utf-8 -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui
+`java -Dfile.encoding=utf-8 -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -jar paperclip.jar nogui`
 
 **❗Lưu ý: Bạn chỉnh lại giá trị Xmx và Xms (nhớ để bằng nhau). Trường hợp dùng nhiều hơn 12GB tinh chỉnh lại giá trị các flag dưới đây:**  
 
-> -XX:G1NewSizePercent=40
--XX:G1MaxNewSizePercent=50-XX:G1HeapRegionSize=16M-XX:G1ReservePercent=15-XX:InitiatingHeapOccupancyPercent=20  
+`-XX:G1NewSizePercent=40
+-XX:G1MaxNewSizePercent=50-XX:G1HeapRegionSize=16M-XX:G1ReservePercent=15-XX:InitiatingHeapOccupancyPercent=20`
 
-<h1 align="center">Nâng cao</h1>  
+<h1 align="center">B</h1>  
 
-<h1 name="p4">Phần I. Tinh chỉnh bukkit.yml</h1>  
+<h1 name="bukkit">Phần I. Tinh chỉnh bukkit.yml</h1>  
 
 > Vào file bukkit.yml và chỉnh như sau  
 
 |Cài đặt|Giá trị|
 |--|--|
-|chunk-gc.period-in-ticks|400|
-|ticks-per.(type)-spawns|monster:5, water:11, water-ambient:21, ambient:31|
-|autosave|6000|
+|chunk-gc.period-in-ticks|400|U
+|ticks-per.(type)-spawns|monster:5, water:11, water-ambient:21, ambient:31|Đ
  
-<h1 name="p5">Phần II. Tinh chỉnh spigot.yml</h1>  
+<h1 name="spigot">Phần II. Tinh chỉnh spigot.yml</h1>  
 
 > Vào file spigot.yml và chỉnh như sau
 
@@ -150,12 +145,17 @@ Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã đ�
 |save-user-cache-on-stop-only|true|
 |max-tick-time|tile:1000, entity:1000|
 |mob-spawn-range|6|
-|entity-activation-range|animals:16, monsters:24, raiders: 48, misc:8|
+|entity-activation-range|animals: 16`, `monsters: 24`, `raiders: 48`, `misc: 8`, `water: 8`, `villagers: 16`, `flying-monsters: 48`|
 |tick-inactive-villagers|false|
 |merge-radius|item:4.0, exp:6.0|
 |arrow-despawn-rate|300|
+|view-distance|4|
+|entity-tracking-range|`players: 48`, `animals: 48`, `monsters: 48`, `misc: 32`, `other: 64`|
+|hopper-transfer|8|
+|hopper-check|8|
 
-<h1 name="p6">Phần III. Tinh chỉnh paper.yml</h1>
+
+<h1 name="paper">Phần III. Tinh chỉnh paper.yml</h1>
 
 > Vào file paper.yml và chỉnh như sau
 
@@ -178,8 +178,19 @@ Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã đ�
 |per-player-mob-spawns|true|
 |alt-item-despawn-rate|true|
 |anti-xray.enabled|true|
+|remove-corrupt-tile-entities|true|
+|nether-ceiling-void-damage-height|127|
+|no-tick-view-distance|7|
+|delay-chunk-unloads-by|10|
+|seed-based-feature-search-loads-chunks|true|
+|update-pathfinding-on-block-update|false|
+|fix-climbing-bypassing-cramming-rule|true
+|use-faster-eigencraft-redstone|true|
+|disable-move-event|false|
+|treasure-maps-return-already-discovered|true
+|entity-per-chunk-save-limit|`experience_orb: 16`, `arrow: 16`, `dragonfireball: 3`, `egg: 8`, `ender_pearl: 8`, `fireball: 8`, `firework: 8`, `largefireball: 8`, `lingeringpotion: 8`, `llamaspit: 3`, `shulkerbullet: 8`, `sizedfireball: 8`, `snowball: 8`, `spectralarrow: 16`, `splashpotion: 3`, `thrownexpbottle: 3`, `trident: 16`, `witherskull: 4`|
 
-<h1 name="p7">Phần IV. Tinh chỉnh server.properties</h1>  
+<h1 name="server-properties">Phần IV. Tinh chỉnh server.properties</h1>  
 
 > Mở file server.properties và chỉnh như sau
 
@@ -187,7 +198,32 @@ Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã đ�
 |--|--|
 |view-distance|5| 
 
-<h1 name="p8">Phần V. Các kinh nghiệm khác</h1>
+<h1 name="purpur">Phần V. Tinh chỉnh purpur.yml</h1>
+
+> Mở file purpur.yml và chỉnh như sau
+
+|Cài đặt|Giá trị|
+|--|--|
+|use-alternate-keepalive|true| 
+|dont-send-useless-entity-packets|true|
+|aggressive-towards-villager-when-lagging|false|
+|entities-can-use-portals|false|
+|villager.brain-ticks|2|
+|villager.lobotomize|true|
+|disable-treasure-searching|true|
+|teleport-if-outside-border|true|
+
+<h1 name="airplane">Phần VI. Tinh chỉnh airplane.yml</h1>
+
+> Mở file airplane.yml và chỉnh như sau
+
+|Cài đặt|Giá trị|
+|--|--|
+|max-loads-per-projectile|8| 
+|max-tick-freq|20|
+|activation-dist-mod|7|
+
+<h1 name="tips">Phần VII. Các kinh nghiệm khác</h1>
 
 - Nói về số RAM cấp cho mỗi server, một server lag có thể là do dung lượng RAM được cấp quá ít, nhưng một server được cấp *quá nhiều dung lượng RAM* sẽ không khiến cho server của bạn không bao giờ lag. Chỉ nên cấp một lượng RAM đủ cho server hoạt động không lag, cung cấp quá nhiều sẽ là một sự lãng phí tài nguyên vô ích.  
 
@@ -195,8 +231,7 @@ Mình khuyên các bạn nên sử dụng Aikar's Flags, đây là flag đã đ�
 
 <h1 align="center">Giúp đỡ</h1>
 
-Nếu bạn cần giúp đỡ thêm, hãy liên hệ qua Facebook của mình
-<a href="https://www.facebook.com/minhh2792" target="_blank"><img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=flat-square&logo=facebook&logoColor=white" alt="Facebook"></a>
+Nếu bạn cần giúp đỡ thêm, hãy liên hệ qua [Facebook](https://facebook.com/minhh2792) của mình
 
 <h1 align="center">Lời kết</h1>  
 
