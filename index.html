@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <title>Tối ưu Server Minecraft</title>
-      <link rel="icon" href="assets/img/favicon.png" type="image/x-icon"/>
+      <link rel="shortcut icon" type="image/jpg" href="assets/img/favicon.ico"/>
       <meta name="description" content="Một số mẹo hữu ích giúp tối ưu Server Minecraft của bạn" />
       <link rel="canonical" href="https://minhh2792.me/mcvn-optimization-guide/" />
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,13 +13,13 @@
       <meta property="og:url" content="http://minhh2792.me/mcvn-optimization-guide/">
       <meta property="og:title" content="Tối ưu Server Minecraft">
       <meta property="og:description" content="Một số mẹo hữu ích giúp tối ưu Server Minecraft của bạn">
-      <meta property="og:image" content="https://i.imgur.com/KTYklPI.png">
+      <meta property="og:image" content="https://i.imgur.com/NuTXUO0.png">
       <!-- Twitter -->
       <meta property="twitter:card" content="summary_large_image">
       <meta property="twitter:url" content="http://minhh2792.me/mcvn-optimization-guide/">
       <meta property="twitter:title" content="Tối ưu Server Minecraft">
       <meta property="twitter:description" content="Một số mẹo hữu ích giúp tối ưu Server Minecraft của bạn">
-      <meta property="twitter:image" content="https://i.imgur.com/KTYklPI.png">
+      <meta property="twitter:image" content="https://i.imgur.com/NuTXUO0.png">
       <link rel="stylesheet" href="style/style.css">
    </head>
    <body>
@@ -36,16 +36,16 @@
          <ul>
             <li><a href="#hardware">Phần I. Lựa chọn phần cứng</a></li>
             <li><a href="#software">Phần II. Lựa chọn Minecraft Server Software</a></li>
-            <li><a href="#batch">Phần III. Tinh chỉnh run.bat</a></li>
+            <li><a href="#batch">Phần III. Config run.bat</a></li>
          </ul>
          <p><strong>B.</strong></p>
          <ul>
-            <li><a href="#bukkit">Phần I. Tinh chỉnh bukkit.yml</a></li>
-            <li><a href="#spigot">Phần II. Tinh chỉnh spigot.yml</a></li>
-            <li><a href="#paper">Phần III. Tinh chỉnh paper.yml</a></li>
-            <li><a href="#server-properties">Phần IV. Tinh chỉnh server.properties</a></li>
-            <li><a href="#purpur">Phần V. Tinh chỉnh purpur.yml</a></li>
-            <li><a href="#airplane">Phần VI. Tinh chỉnh airplane.yml</a></li>
+            <li><a href="#bukkit">Phần I. Config bukkit.yml</a></li>
+            <li><a href="#spigot">Phần II. Config spigot.yml</a></li>
+            <li><a href="#paper">Phần III. Config paper.yml</a></li>
+            <li><a href="#server-properties">Phần IV. Config server.properties</a></li>
+            <li><a href="#purpur">Phần V. Config purpur.yml</a></li>
+            <li><a href="#airplane">Phần VI. Config airplane.yml</a></li>
             <li><a href="#tips">Phần VII. Các mẹo khác</a></li>
          </ul>
          <h2 id="gi-i-th-ch-thu-t-ng-v-ph-n-lo-i-lag">Giải thích thuật ngữ và phân loại lag</h2>
@@ -193,9 +193,6 @@
                <p><strong><a href="https://github.com/PaperMC/Paper">PaperMC</a>: Bản fork của Spigot khá nổi tiếng. Cải thiện rất nhiều về hiệu năng lẫn gameplay, mechanic.</strong></p>
             </li>
             <li>
-               <p><strong><a href="https://github.com/Spottedleaf/Tuinity">Tuinity</a>: Bản fork của PaperMC, hướng tới việc tối ưu server.</strong>  </p>
-            </li>
-            <li>
                <p><strong><a href="https://github.com/Technove/Airplane">Airplane</a>: Bản fork của Tuinity, hướng tới việc tối ưu server.</strong>  </p>
             </li>
             <li>
@@ -203,22 +200,14 @@
             </li>
          </ul>
          <p><strong>❗Lưu ý: Không dùng Spigot/Craftbukkit hay bất kì bản fork/custom nào &quot;đA lUồNg tỚi 99%&quot;</strong>  </p>
-         <h1 id="batch">Phần III. Tinh chỉnh run.bat</h1>
+         <h1 id="batch">Phần III. Config run.bat</h1>
          <blockquote>
             <p>Tùy chỉnh lại thành phần bên trong file run.bat một cách hiệu quả nhất  </p>
          </blockquote>
-         <p>Mình khuyên các bạn nên sử dụng Aikar&#39;s Flags, đây là flag đã được dùng rộng rãi trên các server lớn. Hãy copy ở bên dưới vì bản gốc không có encoding UTF-8 giúp hiện kí tự tiếng Việt:</p>
-         <code>
-            <p>java -Dfile.encoding=utf-8 -Xms10G -Xmx10G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=<a href="https://mcflags.emc.gs">https://mcflags.emc.gs</a> -Daikars.new.flags=true -jar paperclip.jar nogui</p>
-         </code>
-         <p><strong>❗Lưu ý: Bạn chỉnh lại giá trị Xmx và Xms (nhớ để bằng nhau). Trường hợp dùng nhiều hơn 12GB tinh chỉnh lại giá trị các flag dưới đây:</strong>  </p>
-         <code>
-            <p>-XX:G1NewSizePercent=40
-               -XX:G1MaxNewSizePercent=50-XX:G1HeapRegionSize=16M-XX:G1ReservePercent=15-XX:InitiatingHeapOccupancyPercent=20  
-            </p>
-         </code>
+         <p>Mình khuyên các bạn nên sử dụng Aikar&#39;s Flags, đây là flag đã được dùng rộng rãi trên các server lớn. Hãy sử dụng tool sau để chọn flag thích hợp, chỉ cần điền vào số RAM mà server bạn có cộng với Server Software đang sử dụng <a href="https://blog.airplane.gg/aikar-flags/">Aikar&#39;s Flags Gen</a></p>
+         <p><a href="https://aikar.co/2018/07/02/tuning-the-jvm-g1gc-garbage-collector-flags-for-minecraft/">Link gốc</a></p>
          <h1 align="center">B</h1>
-         <h1 id="bukkit">Phần I. Tinh chỉnh bukkit.yml</h1>
+         <h1 id="bukkit">Phần I. Config bukkit.yml</h1>
          <blockquote>
             <p>Vào file bukkit.yml và chỉnh như sau  </p>
          </blockquote>
@@ -242,7 +231,7 @@
                </tr>
             </tbody>
          </table>
-         <h1 id="spigot">Phần II. Tinh chỉnh spigot.yml</h1>
+         <h1 id="spigot">Phần II. Config spigot.yml</h1>
          <blockquote>
             <p>Vào file spigot.yml và chỉnh như sau</p>
          </blockquote>
@@ -300,7 +289,7 @@
                </tr>
             </tbody>
          </table>
-         <h1 id="paper">Phần III. Tinh chỉnh paper.yml</h1>
+         <h1 id="paper">Phần III. Config paper.yml</h1>
          <blockquote>
             <p>Vào file paper.yml và chỉnh như sau</p>
          </blockquote>
@@ -426,7 +415,7 @@
                </tr>
             </tbody>
          </table>
-         <h1 id="server-properties">Phần IV. Tinh chỉnh server.properties</h1>
+         <h1 id="server-properties">Phần IV. Config server.properties</h1>
          <blockquote>
             <p>Mở file server.properties và chỉnh như sau</p>
          </blockquote>
@@ -444,7 +433,7 @@
                </tr>
             </tbody>
          </table>
-         <h1 id="purpur">Phần V. Tinh chỉnh purpur.yml</h1>
+         <h1 id="purpur">Phần V. Config purpur.yml</h1>
          <blockquote>
             <p>Mở file purpur.yml và chỉnh như sau</p>
          </blockquote>
@@ -490,7 +479,7 @@
                </tr>
             </tbody>
          </table>
-         <h1 id="airplane">Phần VI. Tinh chỉnh airplane.yml</h1>
+         <h1 id="airplane">Phần VI. Config airplane.yml</h1>
          <blockquote>
             <p>Mở file airplane.yml và chỉnh như sau</p>
          </blockquote>
