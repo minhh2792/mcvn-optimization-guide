@@ -1,1 +1,1 @@
-[Nhấn vào đây để đọc](https://minhh2792.me/mcvn-optimization-guide)
+[Nhấn vào đây để đọc](https://minhh2792.gitbook.io/mcvn-optimization-guide)
