@@ -41,6 +41,8 @@ extra:
   social:
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/minhh2792
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/users/541245686478536726
 
 repo_url: https://github.com/minhh2792/mcvn-optimization-guide
 repo_name: mcvn-optimization-guide
