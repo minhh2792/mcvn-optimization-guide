@@ -1,0 +1,42 @@
+site_name: Tối ưu server Minecraft
+site_author: minhh2792
+site_description: Guide Tối ưu Server Minecraft
+nav:
+    - Trang chủ: index.md
+    - Giải thích thuật ngữ: term-explanation.md
+    - Ảnh hưởng của TPS: tps-lag.md
+    - Lựa chọn phần cứng: choosing-hardware.md
+    - Lựa chọn Server Software: choosing-server-software.md
+    - Startup Flags: startup-flags.md
+
+theme:
+  name: material
+  language: vi
+  logo: assets/logo.png
+  favicon: assets/images/favicon.png
+  palette:
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Light mode
+  font:
+    text: Jetbrains Mono Light
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/brands/facebook
+      link: https://facebook.com/minhh2792
+repo_url: https://github.com/minhh2792/mcvn-optimization-guide
+repo_name: mcvn-optimization-guide
+edit_uri: edit/main
+
+
+
+
