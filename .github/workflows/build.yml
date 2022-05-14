@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: '3.9.7'
       
-      - name: Build
+      - name: Build and deploy
         run: |
           pip install -r requirements.txt
           mkdocs gh-deploy --force

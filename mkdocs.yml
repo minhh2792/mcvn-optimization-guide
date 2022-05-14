@@ -15,6 +15,7 @@ theme:
   language: vi
   logo: assets/logo.png
   favicon: assets/images/favicon.png
+  custom_dir: overrides
   theme:
   palette:
     - media: "(prefers-color-scheme: light)" 
@@ -29,12 +30,15 @@ theme:
         name: Switch to light mode
   font:
     text: Jetbrains Mono
+
 extra_css:
   - stylesheets/extra.css
+
 extra:
   social:
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/minhh2792
+
 repo_url: https://github.com/minhh2792/mcvn-optimization-guide
 repo_name: mcvn-optimization-guide
 edit_uri: edit/main
