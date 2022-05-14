@@ -1,6 +1,7 @@
 site_name: Tối ưu server Minecraft
 site_author: minhh2792
 site_description: Guide Tối ưu Server Minecraft
+site_url: https://minhh2792.is-a.dev/mcvn-optimization-guide/
 nav:
     - Trang chủ: index.md
     - Giải thích thuật ngữ: term-explanation.md
