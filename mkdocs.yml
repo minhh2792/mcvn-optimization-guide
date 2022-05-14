@@ -14,17 +14,18 @@ theme:
   language: vi
   logo: assets/logo.png
   favicon: assets/images/favicon.png
+  theme:
   palette:
     - media: "(prefers-color-scheme: light)" 
-      scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Dark mode
-    - media: "(prefers-color-scheme: dark)" 
       scheme: slate
       toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: default
+      toggle:
         icon: material/toggle-switch
-        name: Light mode
+        name: Switch to light mode
   font:
     text: Jetbrains Mono
 extra_css:
