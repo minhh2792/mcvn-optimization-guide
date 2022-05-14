@@ -10,6 +10,7 @@ nav:
     - Ảnh hưởng của TPS: tps-lag.md
     - Lựa chọn phần cứng: choosing-hardware.md
     - Lựa chọn Server Software: choosing-server-software.md
+    - Lựa chọn Host: choosing-a-host.md
     - Startup Flags: startup-flags.md
 
 theme:
