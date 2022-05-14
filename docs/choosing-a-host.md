@@ -49,7 +49,7 @@ Phù hợp cho... lũ nhóc nít dưới 13 tuổi vắt mũi chưa sạch xem d
 Nếu như bạn không sợ bị DDOS bởi một thằng ất ơ dở hơi / chán không có gì làm nào đó, bạn có thể tiếp tục. Tuy nhiên, phương pháp này vẫn được khuyến nghị là **không nên làm**, trừ khi bạn có đủ kiến thức và tự phòng vệ được bản thân.  
 Nếu bạn vẫn muốn tiếp tục, đây là những hành trang cơ bản bạn có thể làm theo:
 * [Hướng dẫn của Syscraft để host server Minecraft tại nhà - Github](https://github.com/syscraft-mc/starter-server/blob/master/README.md)
-* [Lấy domain chữ thay vì <IP số của bạn>:<PORT> miễn phí dùng Freenom - Forum MinecraftVN](https://minecraftvn.net/tao-ip-chu-cho-server-minecraft-mien-phi-bang-freenom.t602/)
+* [Lấy domain chữ thay vì <IP số của bạn> miễn phí dùng Freenom - Forum MinecraftVN](https://minecraftvn.net/tao-ip-chu-cho-server-minecraft-mien-phi-bang-freenom.t602/)
 * [Hướng dẫn Port forward](https://portforward.com/), hoặc là Google `Cách mở port router <Model router của bạn>`
 
 ## Raspberry PI - Selfhost nhưng là một cực hình
@@ -61,3 +61,5 @@ Khả thi cho server từ 1~5 người, hoặc chỉ dùng để test plugin m�
 * Nếu bạn không muốn đầu tư nhiều tiền mà vẫn muốn có server, có thể chọn Budget Host / VPS  
 * Nếu bạn chỉ muốn mở server cho một số ít bạn bè chơi chung, có thể Self host / Thuê một hosting giá rẻ.  
 * ~~Nếu bạn dưới 13 tuổi và không thể thuyết phục ba mẹ cho mượn thẻ tín dụng, hãy sử dụng Freehost, điển hình như youtuber Itz gì gì đó~~
+
+Credit: [Hướng dẫn optimize server Minecraft của Eternity](https://eternity.community/index.php/paper-optimization117/#Hosting-Options)
