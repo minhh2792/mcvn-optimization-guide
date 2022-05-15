@@ -1,35 +1,37 @@
 site_name: Tối ưu server Minecraft
 site_author: minhh2792
-site_description: Guide Tối ưu Server Minecraft
+site_description: Một chiếc guide nhỏ xinh giúp bạn dễ dàng hơn trong việc tối ưu server
 site_url: https://minhh2792.is-a.dev/mcvn-optimization-guide/
 nav:
-    - Trang chủ: index.md
-    - Giải thích thuật ngữ: term-explanation.md
-    - Ảnh hưởng của TPS: tps-lag.md
-    - Lựa chọn phần cứng: choosing-hardware.md
-    - Lựa chọn Server Software: choosing-server-software.md
-    - Startup Flags: startup-flags.md
+  - Trang chủ: index.md
+  - Giải thích thuật ngữ: term-explanation.md
+  - Ảnh hưởng của TPS: tps-lag.md
+  - Lựa chọn phần cứng: choosing-hardware.md
+  - Lựa chọn hệ điều hành: choosing-os.md
+  - Lựa chọn Server Software: choosing-server-software.md
+  - Startup Flags: startup-flags.md
+  - Mob Stacker: mob-stacker.md
+  - Sử dụng Profiler: profiler-tools.md
+  - "Configuration":
+      - "Bukkit": "configuration/bukkit.md"
+      - "Spigot": "configuration/spigot.md"
+      - "Paper": "configuration/paper.md"
 
 theme:
   name: material
   language: vi
   logo: assets/logo.png
-  favicon: assets/images/favicon.png
+  favicon: assets/images/favicon.ico
   custom_dir: overrides
-  theme:
   palette:
-    - media: "(prefers-color-scheme: light)" 
-      scheme: slate
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)" 
-      scheme: default
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+    scheme: slate
   font:
     text: Jetbrains Mono
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
 
 extra_css:
   - stylesheets/extra.css
@@ -41,8 +43,15 @@ extra:
 
 repo_url: https://github.com/minhh2792/mcvn-optimization-guide
 repo_name: mcvn-optimization-guide
-edit_uri: edit/main
+edit_uri: edit/main/docs
 
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
 
-
-
+copyright: Made with ♥️ by minhh2792 for my belove community
