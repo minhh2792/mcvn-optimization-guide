@@ -16,11 +16,12 @@ nav:
       - "Bukkit": "configuration/bukkit.md"
       - "Spigot": "configuration/spigot.md"
       - "Paper": "configuration/paper.md"
+      - "Purpur": "configuration/purpur.md"
+      - "Pearl": "configuration/pearl.md"
 
 theme:
   name: material
   language: vi
-  logo: assets/logo.png
   favicon: assets/images/favicon.ico
   custom_dir: overrides
   palette:
@@ -40,6 +41,10 @@ extra:
   social:
     - icon: fontawesome/brands/facebook
       link: https://facebook.com/minhh2792
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/users/541245686478536726
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/minhh2792
 
 repo_url: https://github.com/minhh2792/mcvn-optimization-guide
 repo_name: mcvn-optimization-guide
