@@ -14,7 +14,8 @@ Khả thi với server từ 10~50 người chơi, tuỳ theo gói mà bạn mua.
 Có thể không có cho bạn vì dạo gần đây nó khá nổi, và số lượng instance của Oracle thì có hạn. Bạn có thể tham khảo chi tiết hơn [tại đây](https://blogs.oracle.com/developers/post/how-to-set-up-and-run-a-really-powerful-free-minecraft-server-in-the-cloud)  
 Khả thi với server ~20 người chơi liên tục, với instance A1 ARM-based  
 Lưu ý rằng instance của bạn có khả năng bị **disable** hoặc **xoá hoàn toàn** vào ngày thứ **60**, nhưng bạn vẫn có thể xoá instance hiện tại và sử dụng một instance mới (tất nhiên bạn phải còn dung lượng trống trên cloud)  
-**LƯU Ý, PHẢI CÓ BACKUP BOOT VOLUME NẾU BẠN LỰA CHỌN CÁI NÀY!**
+!!! warning "Lưu ý"
+    Nếu bạn muốn theo con đường này, **bắt buộc** phải có backup boot volume.
 
 ## VPS - Virtual Private Server
 Nghe thì có vẻ hời, nhưng thực chất thì VPS sẽ có thể **không bằng** shared host, vì phần lớn VPS hiện tại trên thị trường chỉ tập trung vào phân khúc **web-hosting**, vậy nên tài nguyên (CPU, RAM, v.v) có thể sẽ kém hơn, khiến cho trải nghiệm của bạn bị tệ đi rất nhiều.  
