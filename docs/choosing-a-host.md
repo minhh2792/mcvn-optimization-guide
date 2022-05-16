@@ -64,7 +64,7 @@ Nếu bạn vẫn muốn tiếp tục, đây là những hành trang cơ bản b
 - [Hướng dẫn của Syscraft để host server Minecraft tại nhà - Github](https://github.com/syscraft-mc/starter-server/blob/master/README.md)
 - [Lấy domain chữ thay vì <IP số của bạn> miễn phí dùng Freenom - Forum MinecraftVN](https://minecraftvn.net/tao-ip-chu-cho-server-minecraft-mien-phi-bang-freenom.t602/)
 - [Hướng dẫn Port forward](https://portforward.com/), hoặc là Google `Cách mở port router <Model router của bạn>`
-
+- [Hướng dẫn chống DDOS free bằng TCPShield](https://docs.tcpshield.com/troubleshooting/setup-checklist)
 ## Raspberry PI - Selfhost nhưng là một cực hình
 
 Một giải pháp lý tưởng nếu bạn muốn sự tra tấn. Một chiếc Raspberry PI không thể chạy những phiên bản Minecraft mới hơn mà **không bị lược bỏ một đống tính năng**.  
