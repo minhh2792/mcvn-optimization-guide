@@ -2,7 +2,7 @@ Bạn có thể sử dụng những server software sau
 
 ## Paper
 
-Được phát triển bởi PaperMC, Paper là fork của Spigot. Với hiệu năng tốt hơn đi kèm với nhiều chức năng, các lỗ hổng đã được patch. Hiện Paper là phần mềm được sử dụng nhiều #2 trên thế giới
+Được phát triển bởi PaperMC, Paper là fork của Spigot. Với hiệu năng tốt hơn đi kèm với nhiều chức năng, các lỗ hổng đã được patch. Hiện Paper là phần mềm được sử dụng nhiều #1 trên thế giới
 
 [:material-web: Website](https://papermc.io){ .md-button .md-button--primary }
 [:material-github: Github](https://github.com/PaperMC/Paper){ .md-button .md-button--primary }
@@ -20,11 +20,12 @@ Bạn có thể sử dụng những server software sau
 [:material-web: Website](https://purpurmc.org){ .md-button .md-button--primary }
 [:material-github: Github](https://github.com/PurpurMC/Purpur){ .md-button .md-button--primary }
 
-## Pearl
+## Folia
 
-Được phát triển bởi mình, Pearl là fork của Pufferfish. Đi kèm với một số tối ưu nhỏ và các tính năng kế thừa từ Purpur (chỉ các tính năng cần thiết, không quá thừa thãi)
+Được phát triển bởi PaperMC, Folia là fork của Paper. Với hiệu năng tốt hơn nhờ việc xử lí multithreaded region của minecraft, thích hợp cho server có lượng player tản ra rải rác trên thế giới, hiện vẫn chưa có nhiều plugins hỗ trợ Folia, và Folia cũng chưa public releases, cần phải tự build. Danh sách plugins đã hỗ trợ [github](https://github.com/BlockhostOfficial/folia-plugins) [hangar](https://hangar.papermc.io/?page=0&tag=SUPPORTS_FOLIA&sort=-stars) [modrinth](https://modrinth.com/plugins?g=categories:%27folia%27)
 
-[:material-github: Github](https://github.com/Pearl-Project/Pearl){ .md-button .md-button--primary }
+[:material-web: Website](https://papermc.org){ .md-button .md-button--primary }
+[:material-github: Github](https://github.com/PaperMC/Folia){ .md-button .md-button--primary }
 
 ## Nên chọn cái nào giờ ?
 
@@ -34,7 +35,7 @@ Bạn có thể sử dụng những server software sau
 
 - Có nhiều tính năng thú vị hơn: **[Purpur](#purpur)**
 
-- Vừa muốn có tối ưu, vừa muốn có tính năng của Purpur nhưng không quá thừa thãi: **[Pearl](#pearl)**
+- Muốn server chạy mượt mà hơn nếu đang sử dụng CPU có nhiều nhân: **[Folia](#folia)**
 
 !!! info "Lưu ý"
     Không nên sử dụng Spigot và CraftBukkit
